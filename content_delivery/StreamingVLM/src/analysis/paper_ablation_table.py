@@ -24,7 +24,10 @@ import statistics
 from glob import glob
 
 
-RESULTS = "/scratch/spotluru/streaming_vlm/results/devibench/30fps/vision_sync"
+RESULTS = os.environ.get(
+    "STREAMINGVLM_RESULTS_DIR",
+    "results/devibench/30fps/vision_sync",
+)
 
 
 METHOD_ORDER = [
